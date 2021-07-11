@@ -1,0 +1,59 @@
+#button{
+    background-color: #4caf99; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#button:hover{
+    background-color: #378070; /* Green */
+}
+
+.configuracoes-carta{
+    width: 50%;
+    display: table-cell;
+    background-color: darkslategray;
+    margin-left: 1%;
+    position: relative;
+}
+
+.table{
+    display: table;
+}
+
+.table-row{
+    display: table-row;
+}
+
+.input-text{
+    width: 80%;
+    margin: 2% 10% 0px 10%;
+    border: none;
+    background-color: rgb(31, 53, 53);
+    border: 2px solid rgb(31, 53, 53);
+    border-bottom: 2px solid rgb(15, 26, 26);
+    color: floralwhite;
+    resize: none;
+}
+
+.input-text:focus{
+    border: 2px solid rgb(15, 26, 26);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.titulo{
+    color: floralwhite;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+    padding-top: 3%;
+}

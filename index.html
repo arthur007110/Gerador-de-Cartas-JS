@@ -5,32 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Cartas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carta.css">
+    <link rel="stylesheet" href="texturas.css">
+    <link rel="stylesheet" href="configuracoes-carta.css">
 </head>
 <body>
-    <div class="carta textura-pontos" id="carta">
-        <div class="topo-carta">
-            <div class="nome-carta">
-                Teste Nome Carta
+    <div class="table">
+        <div class="table-row">
+            <div class="center-div carta-container">
+                <div class="carta textura-carbono" id="carta">
+                    <div class="topo-carta">
+                        <div class="nome-carta" id="nome-carta">
+                            Teste Nome Carta
+                        </div>
+                        <div class="custo-mana" id="custo-mana-carta">
+                            3
+                        </div>
+                    </div>
+                    <div class="imagem-carta">
+                        <img id="imagem-carta" src="https://3.bp.blogspot.com/-JXOKBhitPjU/V2v_yxqaTzI/AAAAAAAAADo/_fZEO81oq2oeudlSrXpm3Cyzamns9KytACLcB/s1600/NATUREZA_1.jpg" alt="">
+                    </div>
+                    <div class="rodape-carta">
+                        <div class="descricao-carta" id="descricao-carta">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nemo dignissimos sit, consequatur optio cupiditate ea quae soluta saepe corporis fuga suscipit quidem in quas ipsum, maxime nesciunt officia atque reprehenderit molestiae vitae pariatur enim? Quasi libero est officiis vero?
+                        </div>
+                        <div class="atributos-carta" id="atributos-carta">
+                            ATK: 250 / DEF: 500
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mana-coust">
-                3
-            </div>
-        </div>
-        <div class="imagem-carta">
-            <img src="https://3.bp.blogspot.com/-JXOKBhitPjU/V2v_yxqaTzI/AAAAAAAAADo/_fZEO81oq2oeudlSrXpm3Cyzamns9KytACLcB/s1600/NATUREZA_1.jpg" alt="">
-        </div>
-        <div class="rodape-carta">
-            <div class="descricao-carta">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nemo dignissimos sit, consequatur optio cupiditate ea quae soluta saepe corporis fuga suscipit quidem in quas ipsum, maxime nesciunt officia atque reprehenderit molestiae vitae pariatur enim? Quasi libero est officiis vero?
-            </div>
-            <div class="atributos-carta">
-                ATK: 250 / DEF: 500
+            <div class="configuracoes-carta">
+                <div class="titulo">
+                    Gerador de Cartas
+                </div>
+                <input type="text" class="input-text" id="nome-carta-input" placeholder="Teste Nome Carta">
+                <input type="number" class="input-text" id="custo-mana-carta-input" placeholder="Custo de Mana">
+                <input type="text" class="input-text" id="imagem-url-carta-input" placeholder="Url da Imagem">
+                <textarea class="input-text" id="descricao-carta-input" placeholder="Descrição da Carta"></textarea>
+                <input type="text" class="input-text" id="atributos-carta-input" placeholder="Atributos da Carta">
+                <select id="textura-carta-input" class="input-text" name="Textura">
+                    <option value="textura-carbono">Fibra de Carbono</option>
+                    <option value="textura-pontos">Pontos</option>
+                    <option value="textura-coracoes">Corações</option>
+                    <option value="textura-manto-real">Manto Real</option>
+                    <option value="textura-diamantes">Diamantes</option>
+                    <option value="textura-cubos-japoneses">Cubos Japoneses</option>
+                    <option value="textura-escadas">Escadas</option>
+                    <option value="textura-linhas-horizontais">Linhas Horizontais</option>
+                    <option value="textura-triangulos">Triangulos</option>
+                    <option value="textura-tijolos">Tijolos</option>
+                    <option value="textura-ondulacao-rosa">Ondulação Rosa</option>
+                    <option value="textura-cruz">Cruz</option>
+                    <option value="textura-colmeia">Colmeia</option>
+                    <option value="textura-estrelas">Estrelas</option>
+                    <option value="textura-circulos-estrelas">Circulos e Estrelas</option>
+                </select>
+                <br><br>
+                <button id="button">Baixar Carta</button>
             </div>
         </div>
     </div>
-    <br>
-    <button id="button">Baixar Carta</button>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>

@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(32, 54, 54);
+}
+
+.carta{
+    background-color: rgb(9, 16, 27);
+    width: 350px;
+    height: 550px;
+    border-radius: 3%;
+    border: 2px solid white;
+}
+
+.nome-carta{
+    text-align: center;
+    color: floralwhite;
+    font-weight: bolder;
+    padding-top: 5px;
+}
+
+.custo-mana{
+    margin-left: 1%;
+    width: 5%;
+    background-color: rgb(0, 68, 80);
+    text-align: center;
+    color: floralwhite;
+    font-weight: bolder;
+    border-radius: 50%;
+    /*float: right;*/
+}
+
+.topo-carta{
+    height: 10%;
+}
+
+.imagem-carta{
+    border: 2px solid white;
+    height: 45%;
+}
+
+.imagem-carta img{
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.rodape-carta{
+    height: 45%;
+    padding-top: 4%;
+}
+
+.descricao-carta{
+    background-color: rgba(117, 117, 117, 0.671);
+    border: 2px solid white;
+    height: 75%;
+    color: floralwhite;
+    font-weight: bold;
+    padding-left: 1%;
+    padding-right: 1%;
+    word-wrap: normal;
+    overflow-y: hidden;
+    font-size: small;
+}
+
+.atributos-carta{
+    height: 25%;
+    color: floralwhite;
+    padding-left: 1%;
+    font-weight: bolder;
+    padding-top: 5%;
+}
+
+.center-div{
+    margin: auto;
+    padding: auto;
+}
+
+.carta-container{
+    width: max-content;
+    height: auto;
+    display: table-cell;
+}
