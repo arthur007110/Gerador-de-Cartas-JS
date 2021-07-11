@@ -10,3 +10,9 @@ Crie uma carta modificável com html e css depois efetue o download utilizando a
 4 - Abra o arquivo index.html com seu navegador\
 5 - Visualize o processo de criação da sua cartaz\
 6 - Baixe a carta no botão "Baixar Carta"
+
+
+## Referências
+
+[DOM-TO-IMAGE](https://github.com/tsayen/dom-to-image)\
+[FileSaver](https://github.com/eligrey/FileSaver.js)\
