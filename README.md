@@ -14,5 +14,6 @@ Crie uma carta modificável com html e css depois efetue o download utilizando a
 
 ## Referências
 
+[JQuery](https://jquery.com/)\
 [DOM-TO-IMAGE](https://github.com/tsayen/dom-to-image)\
 [FileSaver](https://github.com/eligrey/FileSaver.js)
