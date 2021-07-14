@@ -1,4 +1,4 @@
-#button{
+.download-button{
     background-color: #4caf99; /* Green */
     border: none;
     color: white;
@@ -12,7 +12,37 @@
     bottom: 0;
 }
 
-#button:hover{
+.download-button:hover{
+    background-color: #378070; /* Green */
+}
+
+.gradient-add-button{
+    background-color: #4caf99; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 30px;
+}
+
+.gradient-add-button:hover{
+    background-color: #378070; /* Green */
+}
+
+.gradient-button{
+    background-color: #4caf99; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+}
+
+.gradient-button:hover{
     background-color: #378070; /* Green */
 }
 
@@ -56,4 +86,16 @@
     font-size: xx-large;
     text-align: center;
     padding-top: 3%;
+}
+
+.gradiente-container{
+    width: 80%;
+    margin: 2% 10% 0px 10%;
+}
+
+.gradient-picker{
+    border: none;
+    background-color: rgb(31, 53, 53);
+    border: 2px solid rgb(31, 53, 53);
+    border-bottom: 2px solid rgb(15, 26, 26);
 }

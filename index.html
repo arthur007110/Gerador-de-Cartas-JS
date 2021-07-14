@@ -48,6 +48,8 @@
                 <input type="color" class="input-text" id="cor-texto-carta-input" placeholder="Cor do Texto">
                 <select id="textura-carta-input" class="input-text" name="Textura">
                     <option value="textura-carbono">Fibra de Carbono</option>
+                    <option value="texura-cor">Cor Sólida</option>
+                    <option value="texura-gradiente">Gradiente</option>
                     <option value="textura-pontos">Pontos</option>
                     <option value="textura-coracoes">Corações</option>
                     <option value="textura-manto-real">Manto Real</option>
@@ -63,8 +65,14 @@
                     <option value="textura-estrelas">Estrelas</option>
                     <option value="textura-circulos-estrelas">Circulos e Estrelas</option>
                 </select>
+                <input type="color" class="input-text" id="cor-fundo-carta-input" hidden="true" placeholder="Cor de Fundo">
+                <div class="gradiente-container" hidden="true" id="gradiente-container">
+                    <input type="color" class="gradient-picker" id="gradient-picker"/><input type="color" class="gradient-picker" id="gradient-picker"/><button class="add gradient-button" href="#">Add Color</button>  
+                    <button id="reset-gradient-button" class="gradient-button" style="display: none;">Reset</button>
+                    <button id="gradient-button" class="gradient-button">Gradient This</button>
+                </div>
                 <br><br>
-                <button id="button">Baixar Carta</button>
+                <button id="button" class="download-button">Baixar Carta</button>
             </div>
         </div>
     </div>

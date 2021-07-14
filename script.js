@@ -14,6 +14,7 @@ $(document).ready(function(){
     $("#cor-texto-carta-input").val("#ffffff");
 });
 
+//#region Inputs
 $("#nome-carta-input").blur(function(){
     $("#nome-carta").html($(this).val());
 });
@@ -30,9 +31,23 @@ $("#atributos-carta-input").blur(function(){
     $("#atributos-carta").html($(this).val());
 });
 $("#textura-carta-input").on('change', function() {
+    if(this.value == "texura-cor"){
+        $("#cor-fundo-carta-input").attr("hidden", false);
+    }else{
+        $("#cor-fundo-carta-input").attr("hidden", true);
+    }
+
+    if(this.value == "texura-gradiente"){
+        $("#gradiente-container").attr("hidden", false);
+    }else{
+        $("#gradiente-container").attr("hidden", true);
+        $("#carta").css("background", "");
+    }
+
     $("#carta").removeClass();
     $("#carta").addClass("carta "+this.value);
 });
+//#endregion Inputs
 /*$("#cor-carta-input").ColorPicker(function(){
     //2px solid white
     $("#carta").css('border', '2px solid '+this.val());
@@ -51,4 +66,50 @@ $("#cor-texto-carta-input").change(function(){
     $("#custo-mana-carta").css('color', $(this).val());
     $("#descricao-carta").css('color', $(this).val());
     $("#atributos-carta").css('color', $(this).val());
+});
+$("#cor-fundo-carta-input").change(function(){
+    //$("#nome-carta").css('background', $(this).val()); custo-mana-carta
+    $("#carta").css('background-color', $(this).val());
+});
+
+$(document).on("click", ".add", function(){
+    $(this).before("<input type='color' class='gradient-picker' id='gradient-picker'/>"); 
+
+    console.log($(".gradient-picker").length);
+    if($(".gradient-picker").length >= 8){
+        $(".add").hide();
+        $("#reset-gradient-button").show();
+    }
+});
+
+$("#reset-gradient-button").click(function(){
+    pickers = $(".gradient-picker").toArray();
+
+    pickers.forEach(element => {
+        $(element).remove();
+    });
+
+    $(".add").before("<input type='color' class='gradient-picker' id='gradient-picker'/>");
+    $(".add").before("<input type='color' class='gradient-picker' id='gradient-picker'/>");
+
+    $(".add").show();
+    $("#reset-gradient-button").hide();
+
+});
+
+$("#gradient-button").click(function(){
+    pickers = $(".gradient-picker").toArray();
+    
+    let colors = "";
+
+    pickers.forEach(element => {
+        colors += ", " + $(element).val();
+    });
+
+    let query = "linear-gradient(to right" + colors + ")";
+    
+    console.log(query);
+
+    $("#carta").css("background-image", query);
+
 });
