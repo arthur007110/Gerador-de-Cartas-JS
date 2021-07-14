@@ -19,7 +19,13 @@ $("#nome-carta-input").blur(function(){
     $("#nome-carta").html($(this).val());
 });
 $("#custo-mana-carta-input").blur(function(){
-    $("#custo-mana-carta").html($(this).val());
+    if($(this).val() < 100 && $(this).val() > 0){
+        $("#custo-mana-carta").html($(this).val());
+    }else if($(this).val() >= 100){
+        $("#custo-mana-carta").html("99");
+    }else{
+        $("#custo-mana-carta").html("0");
+    }
 });
 $("#imagem-url-carta-input").blur(function(){
     $("#imagem-carta").attr("src", $(this).val());
@@ -113,3 +119,20 @@ $("#gradient-button").click(function(){
     $("#carta").css("background-image", query);
 
 });
+
+$("#upload-image-button").click(function(){
+    $("#selecao-arquivo").trigger('click');
+});
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#imagem-carta')
+                .attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}

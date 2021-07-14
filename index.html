@@ -41,12 +41,17 @@
                 </div>
                 <input type="text" class="input-text" id="nome-carta-input" placeholder="Teste Nome Carta">
                 <input type="number" class="input-text" id="custo-mana-carta-input" placeholder="Custo de Mana">
-                <input type="text" class="input-text" id="imagem-url-carta-input" placeholder="Url da Imagem">
+                <div class="image-upload-content">
+                    <input type="text" class="input-text" id="imagem-url-carta-input" placeholder="Url da Imagem">
+                    <div class="text-center" style="padding: 2% 0 2% 0;"> OU</div>
+                    <button id="upload-image-button" style="width: 81%; margin-left: 10%; margin-bottom: 2%;" class="gradient-button">Enviar Imagem</button>
+                    <input id="selecao-arquivo" style="display: none;" type='file' onchange="readURL(this);" />
+                </div>
                 <textarea class="input-text" id="descricao-carta-input" placeholder="Descrição da Carta"></textarea>
                 <input type="text" class="input-text" id="atributos-carta-input" placeholder="Atributos da Carta">
                 <input type="color" class="input-text" id="cor-carta-input" placeholder="Cor da Carta">
                 <input type="color" class="input-text" id="cor-texto-carta-input" placeholder="Cor do Texto">
-                <select id="textura-carta-input" class="input-text" name="Textura">
+                <select id="textura-carta-input" class="input-dropdown" name="Textura">
                     <option value="textura-carbono">Fibra de Carbono</option>
                     <option value="texura-cor">Cor Sólida</option>
                     <option value="texura-gradiente">Gradiente</option>

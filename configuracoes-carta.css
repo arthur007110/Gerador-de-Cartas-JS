@@ -99,3 +99,42 @@
     border: 2px solid rgb(31, 53, 53);
     border-bottom: 2px solid rgb(15, 26, 26);
 }
+
+.text-center{
+    color: floralwhite;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.input-dropdown{
+    width: 81.5%;
+    margin: 2% 10% 0px 10%;
+    border: none;
+    background-color: rgb(31, 53, 53);
+    border: 2px solid rgb(31, 53, 53);
+    border-bottom: 2px solid rgb(15, 26, 26);
+    color: floralwhite;
+    resize: none;
+    text-align: center;
+}
+
+.input-file{
+    padding-left: 1%;
+    width: 80%;
+    margin: 2% 10% 0px 10%;
+    border: none;
+    background-color: rgb(31, 53, 53);
+    border: 2px solid rgb(31, 53, 53);
+    border-bottom: 2px solid rgb(15, 26, 26);
+    color: floralwhite;
+    resize: none;
+    text-align: center;
+}
+
+.image-upload-content{
+    margin-top: 2%;
+    margin-left: 10%;
+    width: 81%;
+    border: 2px solid rgb(15, 26, 26);
+}
