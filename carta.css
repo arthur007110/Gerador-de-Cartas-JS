@@ -47,7 +47,10 @@ body{
 
 .rodape-carta{
     height: 45%;
-    padding-top: 4%;
+}
+
+.divisoria{
+    height: 5%;
 }
 
 .descricao-carta{
@@ -64,7 +67,7 @@ body{
 }
 
 .atributos-carta{
-    height: 25%;
+    height: 10%;
     color: floralwhite;
     padding-left: 1%;
     font-weight: bolder;
