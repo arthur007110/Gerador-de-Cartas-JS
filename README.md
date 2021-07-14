@@ -4,12 +4,9 @@ Crie uma carta modificável com html e css depois efetue o download utilizando a
 
 ## Como Usar
 
-1 - Baixar ou clone o projeto\
-2 - Abra os arquivos html e css em um editor de texto ou código\
-3 - Modifique as informações que quiser das carta\
-4 - Abra o arquivo index.html com seu navegador\
-5 - Visualize o processo de criação da sua cartaz\
-6 - Baixe a carta no botão "Baixar Carta"
+1 - Acesse o Sistema [Neste Link](https://arthurcosta00.000webhostapp.com/gerador-cartas/index.html)\
+2 - Modifique os Parâmetros Para Tornar sua Carta Ideal\
+3 - Clique no Botão "Baixar Imagem"
 
 
 ## Referências
