@@ -6,7 +6,7 @@ Crie uma carta modificável com html e css depois efetue o download utilizando a
 
 1 - Acesse o Sistema [Neste Link](https://arthurcosta00.000webhostapp.com/gerador-cartas/index.html)\
 2 - Modifique os Parâmetros Para Tornar sua Carta Ideal\
-3 - Clique no Botão "Baixar Imagem"
+3 - Clique no Botão "Baixar Carta"
 
 
 ## Referências
