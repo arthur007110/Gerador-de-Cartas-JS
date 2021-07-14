@@ -56,6 +56,7 @@
 
 .table{
     display: table;
+    margin: auto;
 }
 
 .table-row{
