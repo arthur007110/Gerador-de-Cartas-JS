@@ -8,35 +8,36 @@
     <link rel="stylesheet" href="carta.css">
     <link rel="stylesheet" href="texturas.css">
     <link rel="stylesheet" href="configuracoes-carta.css">
+    <link rel="stylesheet" href="pagina.css">
 </head>
 <body>
-    <div class="table">
-        <div class="table-row">
-            <div class="center-div carta-container">
-                <div class="carta textura-carbono" id="carta">
-                    <div class="topo-carta">
-                        <div class="nome-carta" id="nome-carta">
-                            Teste Nome Carta
-                        </div>
-                        <div class="custo-mana" id="custo-mana-carta">
-                            3
-                        </div>
+    <div class="master-div">
+        <div class="center-div carta-container">
+            <div class="carta textura-carbono" id="carta">
+                <div class="topo-carta">
+                    <div class="nome-carta" id="nome-carta">
+                        Teste Nome Carta
                     </div>
-                    <div class="imagem-carta" id="imagem-carta-container">
-                        <img id="imagem-carta" src="https://3.bp.blogspot.com/-JXOKBhitPjU/V2v_yxqaTzI/AAAAAAAAADo/_fZEO81oq2oeudlSrXpm3Cyzamns9KytACLcB/s1600/NATUREZA_1.jpg" alt="">
+                    <div class="custo-mana" id="custo-mana-carta">
+                        3
                     </div>
-                    <div class="rodape-carta">
-                        <div class="divisoria"></div>
-                        <div class="descricao-carta" id="descricao-carta">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nemo dignissimos sit, consequatur optio cupiditate ea quae soluta saepe corporis fuga suscipit quidem in quas ipsum, maxime nesciunt officia atque reprehenderit molestiae vitae pariatur enim? Quasi libero est officiis vero?
-                        </div>
-                        <div class="atributos-carta" id="atributos-carta">
-                            ATK: 250 / DEF: 500
-                        </div>
+                </div>
+                <div class="imagem-carta" id="imagem-carta-container">
+                    <img id="imagem-carta" src="https://yandillarose.com.au/wp-content/uploads/2018/10/img-placeholder.png" alt="">
+                </div>
+                <div class="rodape-carta">
+                    <div class="divisoria"></div>
+                    <div class="descricao-carta" id="descricao-carta">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores nemo dignissimos sit, consequatur optio cupiditate ea quae soluta saepe corporis fuga suscipit quidem in quas ipsum, maxime nesciunt officia atque reprehenderit molestiae vitae pariatur enim? Quasi libero est officiis vero?
+                    </div>
+                    <div class="atributos-carta" id="atributos-carta">
+                        ATK: 250 / DEF: 500
                     </div>
                 </div>
             </div>
-            <div class="configuracoes-carta">
+        </div>
+        <div class="configuracoes-carta">
+            <div style="max-height: 92%; overflow: auto; overflow-x: hidden;">
                 <div class="titulo">
                     Gerador de Cartas
                 </div>
@@ -48,7 +49,7 @@
                     <button id="upload-image-button" style="width: 81%; margin-left: 10%; margin-bottom: 2%;" class="gradient-button">Enviar Imagem</button>
                     <input id="selecao-arquivo" style="display: none;" type='file' onchange="readURL(this);" />
                 </div>
-                <textarea class="input-text" id="descricao-carta-input" placeholder="Descrição da Carta"></textarea>
+                <textarea class="input-textarea" id="descricao-carta-input" placeholder="Descrição da Carta"></textarea>
                 <input type="text" class="input-text" id="atributos-carta-input" placeholder="Atributos da Carta">
                 <input type="color" class="input-text" id="cor-carta-input" placeholder="Cor da Carta">
                 <input type="color" class="input-text" id="cor-texto-carta-input" placeholder="Cor do Texto">
@@ -73,14 +74,25 @@
                 </select>
                 <input type="color" class="input-text" id="cor-fundo-carta-input" hidden="true" placeholder="Cor de Fundo">
                 <div class="gradiente-container" hidden="true" id="gradiente-container">
-                    <input type="color" class="gradient-picker" id="gradient-picker"/><input type="color" class="gradient-picker" id="gradient-picker"/><button class="add gradient-button" href="#">Add Color</button>  
-                    <button id="reset-gradient-button" class="gradient-button" style="display: none;">Reset</button>
-                    <button id="gradient-button" class="gradient-button">Gradient This</button>
+                    <select name="Tipo de Gradiente" class="input-dropdown" id="tipo-gradiente-input">
+                        <option value="linear">Linear</option>
+                        <option value="radial">Radial</option>
+                    </select>
+                    <div style="margin: 2%; padding-left: 9%; padding-right: 8%;">
+                        <input type='color' class='gradient-picker'/><input type='color' class='gradient-picker'/><span id="cursor-add-cor" hidden></span>
+                    </div>
+                    <button class="add gradient-button" href="#">Adicionar Cor</button>  
+                    <button id="reset-gradient-button" class="gradient-button" style="display: none;">Resetar</button>
+                    <button id="gradient-button" class="gradient-button">Aplicar Gradiente</button>
                 </div>
-                <br><br>
-                <button id="button" class="download-button">Baixar Carta</button>
+                <br>  
             </div>
+            <br><br>
+            <button id="download-button" class="download-button">Baixar Carta</button>
         </div>
+    </div>
+    <div class="rodape">
+        Desenvolvido por <a href="https://arthur007110.github.io" target="_blank">Arthur C. Gomes</a>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

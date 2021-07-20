@@ -1,3 +1,7 @@
+button{
+    transition: linear 0.1s;
+}
+
 .download-button{
     background-color: #4caf99; /* Green */
     border: none;
@@ -48,24 +52,31 @@
 
 .configuracoes-carta{
     width: 50%;
+    height: 600px;
     display: table-cell;
     background-color: darkslategray;
     margin-left: 1%;
     position: relative;
 }
 
-.table{
-    display: table;
-    margin: auto;
-}
-
-.table-row{
-    display: table-row;
+.master-div{
+    display: flex;
 }
 
 .input-text{
     width: 80%;
-    margin: 2% 10% 0px 10%;
+    margin: 2% 0 0 10%;
+    border: none;
+    background-color: rgb(31, 53, 53);
+    border: 2px solid rgb(31, 53, 53);
+    border-bottom: 2px solid rgb(15, 26, 26);
+    color: floralwhite;
+}
+
+.input-textarea{
+    width: 80%;
+    height: 100px;
+    margin: 2% 0 0 10%;
     border: none;
     background-color: rgb(31, 53, 53);
     border: 2px solid rgb(31, 53, 53);
@@ -91,7 +102,7 @@
 
 .gradiente-container{
     width: 80%;
-    margin: 2% 10% 0px 10%;
+    margin: 2% 0 0 10%;
 }
 
 .gradient-picker{
@@ -139,3 +150,26 @@
     width: 81%;
     border: 2px solid rgb(15, 26, 26);
 }
+
+/*Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(31, 53, 53); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4caf99; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #378070; 
+  }
