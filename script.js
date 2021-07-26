@@ -36,7 +36,11 @@ $("#custo-mana-carta-input").on("input", function(){
     }
 });
 //Mudando imagem da carta somente quando o usuário desfoca o input
-$("#imagem-url-carta-input").blur(function(){
+/*$("#imagem-url-carta-input").blur(function(){
+    $("#imagem-carta").attr("src", $(this).val());
+});*/
+//Mudando imagem da carta a cada input do usuário
+$("#imagem-url-carta-input").on("input", function(){
     $("#imagem-carta").attr("src", $(this).val());
 });
 //Mudando descrição da carta a cada input do usuário
@@ -90,6 +94,50 @@ $(document).on("click", ".add", function(){
         $(".add").hide();
         $("#reset-gradient-button").show();
     }
+});
+
+$(document).on("click", ".fundo-modificavel", function(){
+
+    if($("#" + "picker-fundo-" + $(this).attr("id")).length != 0){
+        return;
+    }
+
+    $(this).before("<div id='picker-fundo-" + $(this).attr("id") + "' class='div-picker-fundo'>"+
+    "<input type='color' class='color-picker-fundo' data-id='"+ $(this).attr("id") +"'/>"+
+    "<input type='range' min='0' max='1' step='0.01' class='color-transparencia-fundo' data-id='"+ $(this).attr("id") +"'/>"+
+    "<br><br><button class='picker-fundo-button' data-id=" + $(this).attr("id") + ">OK</button>" +
+    "</div>");
+    
+    $(".color-picker-fundo").change(function(){
+        let id = $(this).data("id")+"";
+        $("#"+id).css('background-color', $(this).val());
+    });
+
+    $(".color-transparencia-fundo").change(function(){
+        let id = $(this).data("id")+"";
+        let cor = $("#"+id).css('background-color');
+        let tranparencia = $(this).val();
+        let rgba = "";
+        if(cor.substring(0, 4) == "rgba"){
+            cor = cor.split("(")[1].split(")")[0];
+            cor = cor.replace(" ", "");
+            cor = cor.split(",");
+            rgba = 'rgba(' + cor[0] + ',' + cor[1] + ',' + cor[2] + ',' + tranparencia + ')';
+        }else if(cor.substring(0, 3) == "rgb"){
+            cor = cor.split("(")[1].split(")")[0];
+            cor = cor.replace(" ", "");
+            cor = cor.split(",");
+            rgba = 'rgba(' + cor[0] + ',' + cor[1] + ',' + cor[2] + ',' + tranparencia + ')';
+        }else{
+            rgba = 'rgba(' + parseInt(cor.slice(-6, -4), 16) + ',' + parseInt(cor.slice(-4, -2), 16) + ',' + parseInt(cor.slice(-2), 16) + ',' + tranparencia + ')';
+        }
+        $("#"+id).css('background-color', rgba);
+    });
+    
+    $(".picker-fundo-button").click(function(){
+        let id = $(this).data("id")+"";
+        $("#picker-fundo-"+id).remove();
+    });
 });
 
 $("#reset-gradient-button").click(function(){

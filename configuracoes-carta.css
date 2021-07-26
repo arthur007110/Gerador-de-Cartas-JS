@@ -73,6 +73,14 @@ button{
     color: floralwhite;
 }
 
+.input-text[type=color]{
+    width: 80%;
+    margin: 2% 0 0 10%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: floralwhite;
+}
+
 .input-textarea{
     width: 80%;
     height: 100px;

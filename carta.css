@@ -16,7 +16,6 @@
 .custo-mana{
     margin-left: 1%;
     width: 5%;
-    background-color: rgb(0, 68, 80);
     text-align: center;
     color: floralwhite;
     font-weight: bolder;
@@ -50,7 +49,6 @@
 }
 
 .descricao-carta{
-    background-color: rgba(117, 117, 117, 0.671);
     border: 2px solid white;
     height: 75%;
     color: floralwhite;
@@ -79,4 +77,37 @@
     width: max-content;
     height: auto;
     display: table-cell;
+}
+
+.fundo-modificavel{
+    /* Classe Identificavél */
+}
+.color-picker-fundo{
+    /* Classe Identificavél */
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.color-transparencia-fundo{
+    /* Classe Identificavél */
+}
+.div-picker-fundo{
+    background-color: #2F4F4F;
+    position: absolute;
+    z-index: 1;
+}
+
+.picker-fundo-button{
+    background-color: #4caf99; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: linear 0.1s;
+}
+.picker-fundo-button:hover{
+    background-color: #378070; /* Green */
 }
